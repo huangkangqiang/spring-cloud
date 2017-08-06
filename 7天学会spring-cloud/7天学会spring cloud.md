@@ -2,7 +2,7 @@
 
 [7天学会spring cloud](http://git.oschina.net/zhou666/spring-cloud-7simple)
 
-## 使用Spring Boot创建一个应用
+## [使用Spring Boot创建一个应用](http://www.cnblogs.com/skyblog/p/5127712.html)
 
 Spring Boot可以看做是在Spring基础上再包了一层，这一层包含方便开发者进行配置管理和快速开发的模块，以及提供了一些开箱即用的工具，比如监控等。
 
@@ -86,7 +86,7 @@ public class HelloWorld {
 
 @SpringBootApplication相当于@Configuration、@EnableAutoConfigurateion和@ComponentScan，你也可以同时使用这三个注解，其中@Configuration、@ComponentScan是Spring框架的语法，用于代码方式创建配置信息和扫描包。
 
-### 部署Spring Boot应用
+### [部署Spring Boot应用](http://www.cnblogs.com/skyblog/p/5129603.html)
 
 要部署运行Spring Boot应用，首选要打包Spring Boot应用，在pom文件中看到的spring-boot-maven-plugin插件就是打包spring boot应用的。
 
