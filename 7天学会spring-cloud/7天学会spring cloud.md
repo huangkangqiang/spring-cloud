@@ -86,7 +86,7 @@ public class HelloWorld {
 
 @SpringBootApplication相当于@Configuration、@EnableAutoConfigurateion和@ComponentScan，你也可以同时使用这三个注解，其中@Configuration、@ComponentScan是Spring框架的语法，用于代码方式创建配置信息和扫描包。
 
-### [部署Spring Boot应用](http://www.cnblogs.com/skyblog/p/5129603.html)
+### 部署Spring Boot应用
 
 要部署运行Spring Boot应用，首选要打包Spring Boot应用，在pom文件中看到的spring-boot-maven-plugin插件就是打包spring boot应用的。
 
@@ -116,9 +116,11 @@ http://localhost:8080/health
 >{"status":"UP","diskSpace":{"status":"UP","total":121206992896,"free":36960731136,"threshold":10485760}}
 
 
-## 使用Spring Cloud实现分布式配置管理
+## [使用Spring Cloud实现分布式配置管理](http://www.cnblogs.com/skyblog/p/5129603.html)
 
 分布式配置管理应该是分布式系统和微服务应用的第一步。想象一下如果你有几十个服务或应用需要配置，而且每个服务还分为开发、测试、生产等不同维度的配置，那工作量是相当大的，而且还容易出错。如果把各个应用的配置信息集中管理起来，使用一套机制或系统来管理，那么将极大的提高系统开发的生产效率，同时会提高系统开发环境和生产环境运行的一致性。
 
 ![分布式配置管理](./images/分布式配置管理.JPG)
+
+在传统开发中，我们往往需要自己开发“配置管理服务器”，你可以使用redis、idap、zookeeper、db等来存放统一配置信息，然后开发一个管理界面来进行管理。传统的做法没什么问题，和spring cloud所提供的配置管理房啊相比，就是前者需要自己开发，而后者直接简单使用现成的组件即可。当然还有很重要的一点，spring配置管理模块由于是spring boot核心来实现的，所以做了大量的工作，可以把一些启动参数进行配置，这在传统的方案中很难办到，因为涉及到要改写第三方组件的问题，难度很大。比如web应用的绑定端口，传统应用只能在tomcat配置文件里改，而spring cloud可以放到远程，类似还有数据库连接，安全框架配置等。
 
